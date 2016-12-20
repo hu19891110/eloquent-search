@@ -298,4 +298,15 @@ trait ElasticModelTrait
 
         return Search::delete($params);
     }
+
+    /**
+     * Create a new Eloquent Collection instance.
+     *
+     * @param  array  $models
+     * @return EloquentEs\Supports\Collection
+     */
+    public function newCollection(array $models = [])
+    {
+        return new Collection($models);
+    }
 }
