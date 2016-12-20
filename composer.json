@@ -1,5 +1,5 @@
 {
-    "name": "thaoha/eloquent-elastic",
+    "name": "thaoha/eloquent-search",
     "type": "library",
     "description": "Index Eloquent models to Elasticsearch",
     "keywords": ["eloquent", "elasticsearch", "elastic", "search", "laravel", "lumen"],
