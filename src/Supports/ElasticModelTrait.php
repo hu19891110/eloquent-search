@@ -138,7 +138,7 @@ trait ElasticModelTrait
             ];
         }
 
-        return Search::indices()->createIndex($index);
+        return Search::indices()->create($index);
     }
 
     /**
@@ -149,7 +149,7 @@ trait ElasticModelTrait
     public static function esDeleteIndex()
     {
         $instance = new static;
-        return Search::indices()->deleteIndex(['index' => $instance->getEsIndexName()]);
+        return Search::indices()->delete(['index' => $instance->getEsIndexName()]);
     }
 
     /**
