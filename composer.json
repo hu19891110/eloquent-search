@@ -1,0 +1,30 @@
+{
+    "name": "thaoha/eloquent-elastic",
+    "type": "library",
+    "description": "Index Eloquent models to Elasticsearch",
+    "keywords": ["eloquent", "elasticsearch", "elastic", "search", "laravel", "lumen"],
+    "homepage": "https://github.com/thaoha/eloquent-elastic",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thao Ha",
+            "email": "havanthao93@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "elasticsearch/elasticsearch": "~2.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "EloquentEs\\": "src/"
+      }
+    },
+    "extra": {
+      "branch-alias": {
+        "dev-master": "1.0-dev"
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
