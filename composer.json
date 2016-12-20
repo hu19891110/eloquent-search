@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Index Eloquent models to Elasticsearch",
     "keywords": ["eloquent", "elasticsearch", "elastic", "search", "laravel", "lumen"],
-    "homepage": "https://github.com/thaoha/eloquent-elastic",
+    "homepage": "https://github.com/thaoha/eloquent-search",
     "license": "MIT",
     "authors": [
         {
