@@ -1,6 +1,9 @@
 eloquent-search
 ===============
 
+[![Latest Stable Version](https://poser.pugx.org/thaoha/eloquent-search/v/stable)](https://packagist.org/packages/thaoha/eloquent-search)
+[![License](https://poser.pugx.org/thaoha/eloquent-search/license)](https://packagist.org/packages/thaoha/eloquent-search)
+
 Index Eloquent models to Elasticsearch. Eloquent-search use [Official low-level client for Elasticsearch](https://github.com/elastic/elasticsearch-php).
 You should read more about Elasticsearch at [https://www.elastic.co](https://www.elastic.co) to get basic knowledge.
 
@@ -146,6 +149,14 @@ $company->esReindex();
 
 a Model or a Collection you can do with same way.
 
-Search document
----------------
-Update soon.
+Search
+------
+
+```php
+$params = [
+    'match' => ['name' => 'keyword']
+];
+$hits = App\Models\Company::esSearch($params);
+```
+
+You should read more at [https://www.elastic.co/](https://www.elastic.co/) to build you params search
