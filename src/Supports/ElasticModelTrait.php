@@ -277,10 +277,14 @@ trait ElasticModelTrait
 
         $result = Search::search($params);
 
+        $total = $result['hits']['total'];
         $result = $result['hits']['hits'];
         $result = new Collection($result);
 
-        return $result->pluck('_source');
+        return [
+            'data' => $result->pluck('_source'),
+            'total' => $total,
+        ];
     }
 
     /**
