@@ -1,6 +1,6 @@
 <?php namespace EloquentEs\Supports;
 
-use Illuminate\Support\Collection as BaseCollection;
+use Illuminate\Database\Eloquent\Collection as BaseCollection;
 
 /**
  * Class Collection
