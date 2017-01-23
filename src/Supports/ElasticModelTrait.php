@@ -244,9 +244,10 @@ trait ElasticModelTrait
      * @param int $limit
      * @param array $sourceFields
      * @param array $sort
+     * @param array $minScore
      * @return Collection
      */
-    public static function esSearch(array $query = array(), $page = 1, $limit = 15, array $sourceFields = [], array $sort = [])
+    public static function esSearch(array $query = array(), $page = 1, $limit = 15, array $sourceFields = [], array $sort = [], $minScore = null)
     {
         $instance = new static;
         $params = [
@@ -254,6 +255,10 @@ trait ElasticModelTrait
             'type' => $instance->getEsTypeName(),
             'body' => []
         ];
+
+        if ($minScore) {
+            $params['body']['min_score'] = $minScore;
+        }
 
         if (!empty($query)) {
             $params['body']['query'] = $query;
